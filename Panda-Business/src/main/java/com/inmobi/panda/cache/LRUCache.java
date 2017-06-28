@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Created by ankit.anand on 28/06/17.
  */
-public class LRUCache implements Cache<Integer,Integer,Integer> {
+public class LRUCache implements Cache<Integer,Integer,Integer>  {
 
     private int capacity;
     private HashMap<Integer,Integer> cacheMap;
@@ -25,7 +25,7 @@ public class LRUCache implements Cache<Integer,Integer,Integer> {
 
 
     @Override
-    public Integer get(Integer key) {
+    public synchronized Integer get(Integer key) {
         if(cacheMap.containsKey(key))
         {
             return 1;
@@ -34,7 +34,7 @@ public class LRUCache implements Cache<Integer,Integer,Integer> {
     }
 
     @Override
-    public void put(Integer key, Integer value) {
+    public synchronized void put(Integer key, Integer value) {
         if(queue.size() < capacity){
             if(get(key) == -1){
                 queue.add(key);
