@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Panda Test Suite">
+    <test name="LRU Cache Test">
+        <classes>
+            <class name="com.inmobi.pandaTestSuite.cache.LRUCacheTest" />
+        </classes>
+    </test>
+</suite>
