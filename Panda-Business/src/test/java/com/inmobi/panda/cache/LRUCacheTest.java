@@ -16,6 +16,7 @@ public class LRUCacheTest {
         Assert.assertEquals(lruCache.get(2),(Integer)(1));
         lruCache.put(3,3);
         Assert.assertEquals(lruCache.get(3),(Integer)(1));
+        Assert.assertEquals(lruCache.get(4),(Integer)(-1));
         lruCache.put(2,2);
         Assert.assertEquals(lruCache.get(2),(Integer)(1));
         lruCache.put(4,4);
